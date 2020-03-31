@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstim300_driver_lib.a  CMakeFiles/stim300_driver_lib.dir/src/driver_stim300.cpp.o CMakeFiles/stim300_driver_lib.dir/src/datagram_parser.cpp.o CMakeFiles/stim300_driver_lib.dir/src/serial_unix.cpp.o
+/usr/bin/ranlib libstim300_driver_lib.a

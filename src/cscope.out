@@ -1,0 +1,3513 @@
+cscope 15 /media/zuhaozou/C00A1DF60A1DEA64/stim300_ws/src/driver/src -q 0000000316 0000020986
+	@datagram_parser.cpp
+
+2 
+	~"d©agøm_∑r£r.h
+"
+
+4 
+usög
+ 
+«me•a˚
+ 
+	g°im_300
+;
+
+6 
+	gD©agømP¨£r
+::
+	$D©agømP¨£r
+(
+D©agømIdítifõr
+ 
+dg_id
+, 
+GyroOuçutUnô
+ 
+gyro_o
+, 
+AccOuçutUnô
+ 
+acc_o
+,
+
+7 
+In˛OuçutUnô
+ 
+ö˛_o
+)
+
+8 : 
+	`is_ö˛uded_
+(
+	`isIn˛uded
+(
+dg_id
+))
+
+9 , 
+	`gyro_sˇÀ_
+([=] {
+
+10 
+gyro_o
+)
+
+12 
+GyroOuçutUnô
+::
+ANGULAR_RATE
+:
+
+13 
+GyroOuçutUnô
+::
+AVERAGE_ANGULAR_RATE
+:
+
+14  
+GYRO_SCALE
+;
+
+15 
+GyroOuçutUnô
+::
+INCREMENTAL_ANGLE
+:
+
+16 
+GyroOuçutUnô
+::
+INTEGRATED_ANGLE
+:
+
+17  
+GYRO_INCR_SCALE
+;
+
+19 
+	}
+}())
+
+20 , 
+acc_sˇÀ_
+([=] {
+
+21 
+acc_o
+)
+
+23 
+AccOuçutUnô
+::
+ACCELERATION
+:
+
+24 
+AccOuçutUnô
+::
+AVERAGE_ACCELERATION
+:
+
+25  
+ACC_SCALE
+;
+
+26 
+AccOuçutUnô
+::
+INCREMENTAL_VELOCITY
+:
+
+27  
+ACC_INCR_SCALE
+;
+
+30 , 
+ö˛_sˇÀ_
+([=] {
+
+31 
+ö˛_o
+)
+
+33 
+In˛OuçutUnô
+::
+ACCELERATION
+:
+
+34 
+In˛OuçutUnô
+::
+AVERAGE_ACCELERATION
+:
+
+35  
+INCL_SCALE
+;
+
+36 
+In˛OuçutUnô
+::
+INCREMENTAL_VELOCITY
+:
+
+37  
+INCL_INCR_SCALE
+;
+
+44 
+boﬁ
+ 
+	gD©agømP¨£r
+::
+∑r£D©agøm
+(
+°d
+::
+ve˘‹
+<
+uöt8_t
+>::
+c⁄°_ôî©‹
+& 
+buf„r_ôr
+, 
+Sís‹D©a
+& 
+£ns‹_d©a
+) const
+
+46 
+uöt8_t
+ 
+	g°©us
+{ 0 };
+
+48 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+GYRO
+])
+
+50 auto& 
+gyro
+ : 
+£ns‹_d©a
+.gyro)
+
+51 
+gyro
+ = 
+gyro_sˇÀ_
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_INERTIAL_SENSOR
+);
+
+52 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+54 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+ACC
+])
+
+56 auto& 
+acc
+ : 
+£ns‹_d©a
+.acc)
+
+57 
+acc
+ = 
+acc_sˇÀ_
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_INERTIAL_SENSOR
+);
+
+58 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+60 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+INCL
+])
+
+62 auto& 
+ö˛
+ : 
+£ns‹_d©a
+.incl)
+
+63 
+ö˛
+ = 
+ö˛_sˇÀ_
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_INERTIAL_SENSOR
+);
+
+64 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+66 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+TEMP
+])
+
+68 i‡(
+is_ö˛uded_
+[
+Sís‹Indx
+::
+GYRO
+])
+
+70 auto& 
+ãmp
+ : 
+£ns‹_d©a
+.
+ãmp_gyro
+)
+
+71 
+ãmp
+ = 
+TEMP_SCALE
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_TEMP_SENSOR
+);
+
+72 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+74 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+ACC
+])
+
+76 auto& 
+ãmp
+ : 
+£ns‹_d©a
+.
+ãmp_acc
+)
+
+77 
+ãmp
+ = 
+TEMP_SCALE
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_TEMP_SENSOR
+);
+
+78 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+80 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+INCL
+])
+
+82 auto& 
+ãmp
+ : 
+£ns‹_d©a
+.
+ãmp_ö˛
+)
+
+83 
+ãmp
+ = 
+TEMP_SCALE
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_TEMP_SENSOR
+);
+
+84 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+87 i‡(
+	gis_ö˛uded_
+[
+Sís‹Indx
+::
+AUX
+])
+
+89 
+£ns‹_d©a
+.
+aux
+ = 
+AUX_SCALE
+ * 
+∑r£TwosCom∂emít
+(
+buf„r_ôr
+, 
+N_BYTES_AUX_SENSOR
+);
+
+90 
+	g°©us
+ +
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_STATUS
+);
+
+92 
+	g£ns‹_d©a
+.
+	gcou¡î
+ = 
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_COUNTER
+);
+
+94 
+	g£ns‹_d©a
+.
+	gœãncy_us
+ = 
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_LATENCY
+);
+
+96 
+	g£ns‹_d©a
+.
+	g¸c
+ = 
+∑r£Unsig√d
+(
+buf„r_ôr
+, 
+N_BYTES_CRC
+);
+
+98  
+	g°©us
+ == 0;
+
+	@datagram_parser.h
+
+2 #i‚de‡
+DRIVER_STIM300_DATAGRAM_PARSER_H
+
+
+3 
+	#DRIVER_STIM300_DATAGRAM_PARSER_H
+
+
+	)
+
+5 
+	~<ve˘‹
+>
+
+6 
+	~<c°döt
+>
+
+7 
+	~<¨øy
+>
+
+8 
+	~"°im300_c⁄°™ts.h
+"
+
+10 
+«me•a˚
+ 
+	g°im_300
+
+
+12 
+	sSís‹D©a
+
+
+14 
+	g°d
+::
+¨øy
+<, 3> 
+	ggyro
+;
+
+15 
+	g°d
+::
+¨øy
+<, 3> 
+	gacc
+;
+
+16 
+	g°d
+::
+¨øy
+<, 3> 
+	gö˛
+;
+
+17 
+	g°d
+::
+¨øy
+<, 3> 
+	gãmp_gyro
+;
+
+18 
+	g°d
+::
+¨øy
+<, 3> 
+	gãmp_acc
+;
+
+19 
+	g°d
+::
+¨øy
+<, 3> 
+	gãmp_ö˛
+;
+
+20 
+	gaux
+;
+
+21 
+uöt8_t
+ 
+	gcou¡î
+;
+
+22 
+uöt16_t
+ 
+	gœãncy_us
+;
+
+23 
+uöt32_t
+ 
+	g¸c
+;
+
+26 
+	sD©agømP¨£r
+
+
+28 
+D©agømP¨£r
+(
+D©agømIdítifõr
+ 
+dg_id
+, 
+GyroOuçutUnô
+ 
+gyro_o
+, 
+AccOuçutUnô
+ 
+acc_o
+, 
+In˛OuçutUnô
+ 
+ö˛_o
+);
+
+29 
+boﬁ
+ 
+∑r£D©agøm
+(
+°d
+::
+ve˘‹
+<
+uöt8_t
+>::
+c⁄°_ôî©‹
+& 
+buf„r_ôr
+, 
+Sís‹D©a
+& 
+£ns‹_d©a
+) const;
+
+31 
+	g¥iv©e
+:
+
+33 
+gyro_sˇÀ_
+;
+
+34 
+	gacc_sˇÀ_
+;
+
+35 
+	gö˛_sˇÀ_
+;
+
+37 c⁄° 
+	g°d
+::
+¨øy
+<
+boﬁ
+, 5> 
+	gis_ö˛uded_
+;
+
+41 c⁄° 
+uöt32_t
+ 
+∑r£Unsig√d
+(
+°d
+::
+ve˘‹
+<
+uöt8_t
+>::
+c⁄°_ôî©‹
+& 
+ô
+, uöt8_à
+size
+)
+
+43 
+uöt32_t
+ 
+	gtmp
+{ 0 };
+
+44 
+	gi
+ = 0; i < 
+	gsize
+; ++i)
+
+46 
+	gtmp
+ = (
+tmp
+ << 8uË| *(
+ô
+++);
+
+48  
+	gtmp
+;
+
+55 c⁄° 
+öt32_t
+ 
+∑r£TwosCom∂emít
+(
+°d
+::
+ve˘‹
+<
+uöt8_t
+>::
+c⁄°_ôî©‹
+& 
+ô
+, uöt8_à
+size
+)
+
+57 i‡(
+	gsize
+ == 3)
+
+59  ((*
+ô
+++ << 24) | (*it++ << 16) | (*it++ << 8)) >> 8;
+
+61 i‡(
+	gsize
+ == 2)
+
+63  ((*
+ô
+++ << 24) | (*it++ << 16)) >> 16;
+
+67 
+throw
+ 
+	g°d
+::
+ru¡ime_îr‹
+("Unsuported input size forÖarseTwoComplement");
+
+	@driver_stim300.cpp
+
+2 
+	~"drivî_°im300.h
+"
+
+4 
+	gDrivîStim300
+::
+	$DrivîStim300
+(
+SîülDrivî
+& 
+£rül_drivî
+, 
+°im_300
+::
+D©agømIdítifõr
+ 
+d©agøm_id
+,
+
+5 
+°im_300
+::
+GyroOuçutUnô
+ 
+gyro_ouçut_unô
+, stim_300::
+AccOuçutUnô
+ 
+acc_ouçut_unô
+,
+
+6 
+°im_300
+::
+In˛OuçutUnô
+ 
+ö˛_ouçut_unô
+, 
+SîülDrivî
+::
+BAUDRATE
+ 
+baudøã
+,
+
+7 
+uöt16_t
+ 
+£rül_ªad_timeout_ms
+)
+
+8 : 
+	`£rül_drivî_
+(
+£rül_drivî
+)
+
+9 , 
+	`£rül_ªad_timeout_ms_
+(
+£rül_ªad_timeout_ms
+)
+
+10 , 
+	`d©agøm_id_
+(
+d©agøm_id
+)
+
+11 , 
+	`mode_
+(
+Mode
+::
+N‹mÆ
+)
+
+12 , 
+	`n_ªad_byãs_
+(0)
+
+13 , 
+	`ö_sync_
+(
+Ál£
+)
+
+14 , 
+	`checksum_is_ok_
+(
+Ál£
+)
+
+15 , 
+	`no_öã∫Æ_îr‹_
+(
+åue
+)
+
+16 , 
+	`¸c_dummy_byãs_
+(
+°im_300
+::
+	`numbîOfPaddögByãs
+(
+d©agøm_id
+))
+
+17 , 
+	`£ns‹_d©a_
+()
+
+18 , 
+	`d©agøm_∑r£r_
+(
+d©agøm_id
+, 
+gyro_ouçut_unô
+, 
+acc_ouçut_unô
+, 
+ö˛_ouçut_unô
+)
+
+19 , 
+	`d©agøm_size_
+(
+°im_300
+::
+	$ˇlcuœãD©agømSize
+(
+d©agøm_id
+))
+
+21 
+£rül_drivî_
+.
+	`›í
+(
+baudøã
+);
+
+22 
+	}
+}
+
+24 
+	gDrivîStim300
+::~
+	$DrivîStim300
+()
+
+26 
+£rül_drivî_
+.
+	`˛o£
+();
+
+27 
+	}
+}
+
+29 
+	gDrivîStim300
+::
+	$gëAccX
+() const
+
+31  
+£ns‹_d©a_
+.
+acc
+[0];
+
+32 
+	}
+}
+
+33 
+	gDrivîStim300
+::
+	$gëAccY
+() const
+
+35  
+£ns‹_d©a_
+.
+acc
+[1];
+
+36 
+	}
+}
+
+37 
+	gDrivîStim300
+::
+	$gëAccZ
+() const
+
+39  
+£ns‹_d©a_
+.
+acc
+[2];
+
+40 
+	}
+}
+
+41 
+	gDrivîStim300
+::
+	$gëGyroX
+() const
+
+43  
+£ns‹_d©a_
+.
+gyro
+[0];
+
+44 
+	}
+}
+
+45 
+	gDrivîStim300
+::
+	$gëGyroY
+() const
+
+47  
+£ns‹_d©a_
+.
+gyro
+[1];
+
+48 
+	}
+}
+
+49 
+	gDrivîStim300
+::
+	$gëGyroZ
+() const
+
+51  
+£ns‹_d©a_
+.
+gyro
+[2];
+
+52 
+	}
+}
+
+53 
+uöt16_t
+ 
+	gDrivîStim300
+::
+	$gëL©ícy_us
+() const
+
+55  
+£ns‹_d©a_
+.
+œãncy_us
+;
+
+56 
+	}
+}
+
+57 
+boﬁ
+ 
+	gDrivîStim300
+::
+	$isChecksumGood
+() const
+
+59  
+checksum_is_ok_
+;
+
+60 
+	}
+}
+
+61 
+boﬁ
+ 
+	gDrivîStim300
+::
+	$isSís‹SètusGood
+() const
+
+63  
+no_öã∫Æ_îr‹_
+;
+
+64 
+	}
+}
+
+65 
+uöt8_t
+ 
+	gDrivîStim300
+::
+	$gëI¡î«lMósurmítCou¡î
+() const
+
+67  
+£ns‹_d©a_
+.
+cou¡î
+;
+
+68 
+	}
+}
+
+70 
+	gDrivîStim300
+::
+	$gëAvîageTemp
+() const
+
+72 
+sum
+{ 0 };
+
+73 
+uöt8_t
+ 
+cou¡
+{ 0 };
+
+75  
+cou¡
+ !0 ? 
+sum
+ / cou¡ : 
+°d
+::
+numîic_limôs
+<>::
+	`quõt_NaN
+();
+
+76 
+	}
+}
+
+78 
+boﬁ
+ 
+	gDrivîStim300
+::
+	$¥o˚ssPackë
+()
+
+80 i‡(
+this
+->
+mode_
+ =
+Mode
+::
+N‹mÆ
+)
+
+89 
+uöt8_t
+ 
+byã
+;
+
+90 
+£rül_drivî_
+.
+	`ªadByã
+(
+byã
+))
+
+92 i‡(
+byã
+ =
+°im_300
+::
+	`d©agømIdítifõrToRaw
+(
+d©agøm_id_
+))
+
+94 i‡(
+n_ªad_byãs_
+ =
+d©agøm_size_
+)
+
+96 
+n_ªad_byãs_
+ = 0;
+
+97 
+ö_sync_
+ = 
+åue
+;
+
+100 i‡(
+nŸ
+ 
+ö_sync_
+)
+
+102 
+ö_sync_
+ = 
+åue
+;
+
+104 
+n_ªad_byãs_
+ = 0;
+
+112 
+buf„r_
+.
+	`push_back
+(
+byã
+);
+
+113 
+n_ªad_byãs_
+++;
+
+114 i‡(
+buf„r_
+.
+	`size
+(Ë> 
+d©agøm_size_
+)
+
+115 
+buf„r_
+.
+	`îa£
+(buf„r_.
+	`begö
+());
+
+117 i‡(
+n_ªad_byãs_
+ =
+d©agøm_size_
+)
+
+120 i‡(
+buf„r_
+.
+	`em±y
+())
+
+123  
+Ál£
+;
+
+127 autÿ
+begö
+ = 
+buf„r_
+.
+	`cbegö
+();
+
+128 autÿ
+ô
+ = 
+°d
+::
+	`√xt
+(
+begö
+);
+
+130 i‡(*
+begö
+ !
+°im_300
+::
+	`d©agømIdítifõrToRaw
+(
+d©agøm_id_
+))
+
+132  
+Ál£
+;
+
+137 
+no_öã∫Æ_îr‹_
+ = 
+d©agøm_∑r£r_
+.
+	`∑r£D©agøm
+(
+ô
+, 
+£ns‹_d©a_
+);
+
+139 
+checksum_is_ok_
+ = 
+	`vîifyChecksum
+(
+begö
+, 
+ô
+, 
+£ns‹_d©a_
+.
+¸c
+);
+
+141  
+åue
+;
+
+143 i‡(
+this
+->
+mode_
+ =
+Mode
+::
+Sîvi˚
+)
+
+147  
+Ál£
+;
+
+150  
+Ál£
+;
+
+151 
+	}
+}
+
+153 
+boﬁ
+ 
+	gDrivîStim300
+::
+vîifyChecksum
+(
+°d
+::
+ve˘‹
+<
+uöt8_t
+>::
+c⁄°_ôî©‹
+ 
+begö
+, std::ve˘‹<uöt8_t>::c⁄°_ôî©‹ 
+íd
+,
+
+154 
+uöt32_t
+& 
+ex≥˘ed_CRC
+)
+
+156 
+as£π
+(
+d©agøm_size_
+ =(
+íd
+ - 
+begö
+));
+
+157 
+	gboo°
+::
+¸c_basic
+<32> 
+¸c_32_ˇlcuœt‹
+(0x04C11DB7, 0xFFFFFFFF, 0x00, 
+Ál£
+, false);
+
+158 
+uöt8_t
+ 
+	gbuf„r_CRC
+[
+d©agøm_size_
+ - (
+uöt32_t
+Ë+ 
+¸c_dummy_byãs_
+];
+
+159 
+	g°d
+::
+c›y
+(
+begö
+, 
+íd
+ - (
+uöt32_t
+Ë+ 
+¸c_dummy_byãs_
+, 
+buf„r_CRC
+);
+
+162 
+size_t
+ 
+	gi
+ = 0; i < 
+	g¸c_dummy_byãs_
+; ++i)
+
+163 
+	gbuf„r_CRC
+[(
+buf„r_CRC
+Ë- (1 + 
+i
+)] = 0x00;
+
+165 
+	g¸c_32_ˇlcuœt‹
+.
+¥o˚ss_byãs
+(
+buf„r_CRC
+, (buffer_CRC));
+
+167  
+	g¸c_32_ˇlcuœt‹
+.
+checksum
+(Ë=
+ex≥˘ed_CRC
+;
+
+	@serial_driver.h
+
+2 #i‚de‡
+DRIVER_STIM300_SERIAL_DRIVER_H
+
+
+3 
+	#DRIVER_STIM300_SERIAL_DRIVER_H
+
+
+	)
+
+5 ˛as†
+	cSîülDrivî
+
+
+7 
+	mpublic
+:
+
+8 ˛as†
+	cBAUDRATE
+ : 
+uöt32_t
+
+
+10 
+BAUD_4800
+ = 4800,
+
+11 
+	mBAUD_9600
+ = 9600,
+
+12 
+	mBAUD_19200
+ = 19200,
+
+13 
+	mBAUD_38400
+ = 38400,
+
+14 
+	mBAUD_57600
+ = 57600,
+
+15 
+	mBAUD_115200
+ = 115200,
+
+16 
+	mBAUD_921600
+ = 921600
+
+18 
+vútuÆ
+ 
+›í
+(
+BAUDRATE
+ 
+baudøã
+) = 0;
+
+19 
+vútuÆ
+ 
+˛o£
+() = 0;
+
+20 
+vútuÆ
+ 
+boﬁ
+ 
+ªadByã
+(
+uöt8_t
+& 
+byã
+) = 0;
+
+21 
+vútuÆ
+ 
+wrôeByã
+(
+uöt8_t
+ 
+byã
+) = 0;
+
+22 
+	gvútuÆ
+ ~
+SîülDrivî
+() = ;
+
+	@serial_unix.cpp
+
+2 
+	~"£rül_unix.h
+"
+
+8 
+	gSîülUnix
+::
+	$SîülUnix
+(c⁄° 
+°d
+::
+°rög
+& 
+£rül_p‹t_«me
+)
+
+10 
+fûe_h™dÀ_
+ = ::
+	`›í
+(
+£rül_p‹t_«me
+.
+	`d©a
+(), 
+O_RDWR
+ | 
+O_NOCTTY
+ | 
+O_NDELAY
+);
+
+11 
+	}
+}
+
+13 
+	gSîülUnix
+::~
+	$SîülUnix
+()
+
+15 
+	`˛o£
+();
+
+16 
+	}
+}
+
+18 
+	gSîülUnix
+::
+	$›í
+(
+BAUDRATE
+ 
+baudøã
+)
+
+20 i‡(
+fûe_h™dÀ_
+ == -1)
+
+22 
+throw
+ 
+°d
+::
+ru¡ime_îr‹
+{ "FailedÅo openÖort" };
+
+27 i‡(!
+	`ißây
+(
+fûe_h™dÀ_
+))
+
+29 
+throw
+ 
+°d
+::
+ru¡ime_îr‹
+{ "SerialÖort isÇot TTY device" };
+
+35 i‡(
+	`tcgë©å
+(
+fûe_h™dÀ_
+, &
+c⁄fig_
+) < 0)
+
+37 
+throw
+ 
+°d
+::
+ru¡ime_îr‹
+{ "CouldÇotÑetrive current serial config" };
+
+48 
+c⁄fig_
+.
+c_iÊag
+ &~(
+IGNBRK
+ | 
+BRKINT
+ | 
+ICRNL
+ | 
+INLCR
+ | 
+PARMRK
+ | 
+INPCK
+ | 
+ISTRIP
+ | 
+IXON
+);
+
+60 
+c⁄fig_
+.
+c_oÊag
+ = 0;
+
+68 
+c⁄fig_
+.
+c_lÊag
+ &~(
+ECHO
+ | 
+ECHONL
+ | 
+ICANON
+ | 
+IEXTEN
+ | 
+ISIG
+);
+
+76 
+c⁄fig_
+.
+c_cÊag
+ &~(
+CSIZE
+ | 
+PARENB
+);
+
+77 
+c⁄fig_
+.
+c_cÊag
+ |
+CS8
+;
+
+83 
+c⁄fig_
+.
+c_cc
+[
+VMIN
+] = 1;
+
+84 
+c⁄fig_
+.
+c_cc
+[
+VTIME
+] = 0;
+
+89 
+boﬁ
+ 
+Áûuª
+;
+
+90 
+baudøã
+)
+
+92 
+BAUDRATE
+::
+BAUD_115200
+:
+
+93 
+Áûuª
+ = (
+	`cf£ti•ìd
+(&
+c⁄fig_
+, 
+B115200
+Ë< 0 || 
+	`cf£to•ìd
+(&config_, B115200) < 0);
+
+95 
+BAUDRATE
+::
+BAUD_57600
+:
+
+96 
+Áûuª
+ = (
+	`cf£ti•ìd
+(&
+c⁄fig_
+, 
+B57600
+Ë< 0 || 
+	`cf£to•ìd
+(&config_, B57600) < 0);
+
+98 
+BAUDRATE
+::
+BAUD_921600
+:
+
+99 
+Áûuª
+ = (
+	`cf£ti•ìd
+(&
+c⁄fig_
+, 
+B921600
+Ë< 0 || 
+	`cf£to•ìd
+(&config_, B921600) < 0);
+
+102 
+Áûuª
+ = 
+åue
+;
+
+104 i‡(
+Áûuª
+)
+
+106 
+throw
+ 
+°d
+::
+ru¡ime_îr‹
+{ "CouldÇot set baudrate" };
+
+112 i‡(
+	`tc£èâr
+(
+fûe_h™dÀ_
+, 
+TCSAFLUSH
+, &
+c⁄fig_
+) < 0)
+
+114 
+throw
+ 
+°d
+::
+ru¡ime_îr‹
+{ "CouldÇotápply serial settings" };
+
+116 
+	}
+}
+
+118 
+	gSîülUnix
+::
+	$˛o£
+()
+
+120 ::
+	`˛o£
+(
+fûe_h™dÀ_
+);
+
+121 
+	}
+}
+
+123 
+	gSîülUnix
+::
+	$wrôeByã
+(
+uöt8_t
+ 
+byã
+)
+
+125 ::
+	`wrôe
+(
+fûe_h™dÀ_
+, &
+byã
+, 1);
+
+126 
+	}
+}
+
+128 
+boﬁ
+ 
+	gSîülUnix
+::
+	$ªadByã
+(
+uöt8_t
+& 
+byã
+)
+
+130  (
+	`ªad
+(
+fûe_h™dÀ_
+, &
+byã
+, 1) > 0);
+
+131 
+	}
+}
+
+	@serial_unix.h
+
+1 #i‚de‡
+DRIVER_STIM300_SERIAL_UBUNTU_H
+
+
+2 
+	#DRIVER_STIM300_SERIAL_UBUNTU_H
+
+
+	)
+
+4 
+	~<°rög
+>
+
+5 
+	~"£rül_drivî.h
+"
+
+6 
+	~<ãrmios.h
+>
+
+7 
+	~<f˙é.h
+>
+
+8 
+	~<uni°d.h
+>
+
+10 
+	~<°rög.h
+>
+
+11 
+	~<°dex˚±
+>
+
+13 ˛as†
+	cSîülUnix
+ : 
+public
+ 
+SîülDrivî
+
+
+15 
+public
+:
+
+16 
+ex∂icô
+ 
+SîülUnix
+(c⁄° 
+°d
+::
+°rög
+& 
+£rül_p‹t_«me
+);
+
+18 ~
+	$SîülUnix
+(Ë
+ovîride
+;
+
+20 
+	$›í
+(
+BAUDRATE
+ 
+baudøã
+Ë
+ovîride
+;
+
+22 
+	$˛o£
+(Ë
+ovîride
+;
+
+24 
+	$wrôeByã
+(
+uöt8_t
+ 
+byã
+Ë
+ovîride
+;
+
+26 
+boﬁ
+ 
+	$ªadByã
+(
+uöt8_t
+& 
+byã
+Ë
+ovîride
+;
+
+28 
+¥iv©e
+:
+
+29 
+fûe_h™dÀ_
+;
+
+30 
+ãrmios
+ 
+c⁄fig_
+;
+
+	@stim300_constants.h
+
+1 #i‚de‡
+DRIVER_STIM300_STIM300_CONSTANTS_H
+
+
+2 
+	#DRIVER_STIM300_STIM300_CONSTANTS_H
+
+
+	)
+
+4 
+	~<c°döt
+>
+
+5 
+	~<m©h.h
+>
+
+6 
+	~<¨øy
+>
+
+8 
+«me•a˚
+ 
+	g°im_300
+
+
+10 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_DATAGRAM_ID
+ = 1;
+
+11 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_INERTIAL_SENSOR
+ = 3;
+
+12 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_TEMP_SENSOR
+ = 2;
+
+13 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_AUX_SENSOR
+ = 3;
+
+14 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_COUNTER
+ = 1;
+
+15 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_LATENCY
+ = 2;
+
+16 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_CRC
+ = 4;
+
+17 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_STATUS
+ = 1;
+
+18 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gN_BYTES_TERMINATION
+ = 2;
+
+19 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	gMAX_DATAGRAM_SIZE
+ = 65;
+
+21 
+c⁄°ex¥
+ 
+	gSTIM300_GRAVITY
+ = 9.81;
+
+22 
+c⁄°ex¥
+ 
+	gTWO_POWER_14
+ = 16'384; // 2^14
+
+23 
+c⁄°ex¥
+ 
+TWO_POWER_20
+ = 1'048'576;
+
+24 
+c⁄°ex¥
+ 
+	gTWO_POWER_21
+ = 2'097'152;
+
+25 
+c⁄°ex¥
+ 
+	gTWO_POWER_22
+ = 4'194'304;
+
+26 
+c⁄°ex¥
+ 
+	gTWO_POWER_24
+ = 16'777'216;
+
+27 
+c⁄°ex¥
+ 
+	gTWO_POWER_25
+ = 33'554'432;
+
+28 
+c⁄°ex¥
+ 
+	gGYRO_INCR_SCALE
+ = (
+M_PI
+ / 180.00Ë/ 
+TWO_POWER_21
+;
+
+29 
+c⁄°ex¥
+ 
+	gGYRO_SCALE
+ = (
+M_PI
+ / 180.00Ë/ 
+TWO_POWER_14
+;
+
+30 
+c⁄°ex¥
+ 
+	gACC_SCALE
+ = (
+STIM300_GRAVITY
+Ë/ 
+TWO_POWER_20
+;
+
+31 
+c⁄°ex¥
+ 
+	gACC_INCR_SCALE
+ = 1 / 
+TWO_POWER_22
+;
+
+32 
+c⁄°ex¥
+ 
+	gINCL_SCALE
+ = (
+STIM300_GRAVITY
+Ë/ 
+TWO_POWER_22
+;
+
+33 
+c⁄°ex¥
+ 
+	gINCL_INCR_SCALE
+ = 1 / 
+TWO_POWER_25
+;
+
+34 
+c⁄°ex¥
+ 
+	gTEMP_SCALE
+ = 1 / 256.00;
+
+35 
+c⁄°ex¥
+ 
+	gAUX_SCALE
+ = 5.0 / 
+TWO_POWER_24
+;
+
+37 ˛as†
+	cD©agømIdítifõr
+ : 
+uöt8_t
+
+
+39 
+RATE
+ = 0x90,
+
+40 
+	gRATE_ACC
+ = 0x91,
+
+41 
+	gRATE_INCL
+ = 0x92,
+
+42 
+	gRATE_ACC_INCL
+ = 0x93,
+
+43 
+	gRATE_TEMP
+ = 0x94,
+
+44 
+	gRATE_ACC_TEMP
+ = 0xA5,
+
+45 
+	gRATE_INCL_TEMP
+ = 0xA6,
+
+46 
+	gRATE_ACC_INCL_TEMP
+ = 0xA7,
+
+47 
+	gRATE_AUX
+ = 0x98,
+
+48 
+	gRATE_ACC_AUX
+ = 0x99,
+
+49 
+	gRATE_INCL_AUX
+ = 0x9A,
+
+50 
+	gRATE_ACC_INCL_AUX
+ = 0x9B,
+
+51 
+	gRATE_TEMP_AUX
+ = 0x9C,
+
+52 
+	gRATE_ACC_TEMP_AUX
+ = 0xAD,
+
+53 
+	gRATE_INCL_TEMP_AUX
+ = 0xAE,
+
+54 
+	gRATE_ACC_INCL_TEMP_AUX
+ = 0xAF,
+
+55 
+	gCONFIGURATION
+ = 0xBC,
+
+56 
+	gCONFIGURATION_CRLF
+ = 0xBD
+
+59 ˛as†
+	cBaudR©e
+ : 
+uöt8_t
+
+
+61 
+BAUD_377400
+ = 0,
+
+62 
+	gBAUD_460800
+ = 1,
+
+63 
+	gBAUD_921600
+ = 2,
+
+64 
+	gBAUD_1843200
+ = 3,
+
+67 ˛as†
+	cGyroOuçutUnô
+ : 
+uöt8_t
+
+
+69 
+ANGULAR_RATE
+,
+
+70 
+	gAVERAGE_ANGULAR_RATE
+,
+
+71 
+	gINCREMENTAL_ANGLE
+,
+
+72 
+	gINTEGRATED_ANGLE
+
+
+74 ˛as†
+	cAccOuçutUnô
+ : 
+uöt8_t
+
+
+76 
+ACCELERATION
+,
+
+77 
+	gAVERAGE_ACCELERATION
+,
+
+78 
+	gINCREMENTAL_VELOCITY
+
+
+80 ˛as†
+	cIn˛OuçutUnô
+ : 
+uöt8_t
+
+
+82 
+ACCELERATION
+,
+
+83 
+	gAVERAGE_ACCELERATION
+,
+
+84 
+	gINCREMENTAL_VELOCITY
+
+
+87 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	$d©agømIdítifõrToRaw
+(
+D©agømIdítifõr
+ 
+d_id
+)
+
+89  
+°©ic_ˇ°
+<
+uöt8_t
+>(
+d_id
+);
+
+90 
+	}
+}
+
+92 
+c⁄°ex¥
+ 
+D©agømIdítifõr
+ 
+	$øwToD©agømIdítifõr
+(
+uöt8_t
+ 
+d©agøm_id
+)
+
+94 
+d©agøm_id
+)
+
+97  
+D©agømIdítifõr
+::
+RATE
+;
+
+99  
+D©agømIdítifõr
+::
+RATE_ACC
+;
+
+101  
+D©agømIdítifõr
+::
+RATE_INCL
+;
+
+103  
+D©agømIdítifõr
+::
+RATE_ACC_INCL
+;
+
+105  
+D©agømIdítifõr
+::
+RATE_TEMP
+;
+
+107  
+D©agømIdítifõr
+::
+RATE_ACC_TEMP
+;
+
+109  
+D©agømIdítifõr
+::
+RATE_INCL_TEMP
+;
+
+111  
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP
+;
+
+113  
+D©agømIdítifõr
+::
+RATE_AUX
+;
+
+115  
+D©agømIdítifõr
+::
+RATE_ACC_AUX
+;
+
+117  
+D©agømIdítifõr
+::
+RATE_INCL_AUX
+;
+
+119  
+D©agømIdítifõr
+::
+RATE_ACC_INCL_AUX
+;
+
+121  
+D©agømIdítifõr
+::
+RATE_TEMP_AUX
+;
+
+123  
+D©agømIdítifõr
+::
+RATE_ACC_TEMP_AUX
+;
+
+125  
+D©agømIdítifõr
+::
+RATE_INCL_TEMP_AUX
+;
+
+127  
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP_AUX
+;
+
+129  
+D©agømIdítifõr
+::
+CONFIGURATION
+;
+
+131  
+D©agømIdítifõr
+::
+CONFIGURATION_CRLF
+;
+
+133  
+D©agømIdítifõr
+::
+CONFIGURATION
+;
+
+135 
+	}
+};
+
+137 
+c⁄°ex¥
+ 
+uöt8_t
+ 
+	$numbîOfPaddögByãs
+(
+D©agømIdítifõr
+ 
+d©agøm_idítifõr
+)
+
+139 
+d©agøm_idítifõr
+)
+
+141 
+D©agømIdítifõr
+::
+CONFIGURATION
+:
+
+143 
+D©agømIdítifõr
+::
+CONFIGURATION_CRLF
+:
+
+145 
+D©agømIdítifõr
+::
+RATE
+:
+
+147 
+D©agømIdítifõr
+::
+RATE_ACC
+:
+
+149 
+D©agømIdítifõr
+::
+RATE_INCL
+:
+
+151 
+D©agømIdítifõr
+::
+RATE_ACC_INCL
+:
+
+153 
+D©agømIdítifõr
+::
+RATE_TEMP
+:
+
+155 
+D©agømIdítifõr
+::
+RATE_ACC_TEMP
+:
+
+157 
+D©agømIdítifõr
+::
+RATE_INCL_TEMP
+:
+
+159 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP
+:
+
+161 
+D©agømIdítifõr
+::
+RATE_AUX
+:
+
+163 
+D©agømIdítifõr
+::
+RATE_ACC_AUX
+:
+
+165 
+D©agømIdítifõr
+::
+RATE_INCL_AUX
+:
+
+167 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_AUX
+:
+
+169 
+D©agømIdítifõr
+::
+RATE_TEMP_AUX
+:
+
+171 
+D©agømIdítifõr
+::
+RATE_ACC_TEMP_AUX
+:
+
+173 
+D©agømIdítifõr
+::
+RATE_INCL_TEMP_AUX
+:
+
+175 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP_AUX
+:
+
+178 
+	}
+}
+
+180 
+	eSís‹Indx
+
+
+182 
+	gGYRO
+ = 0,
+
+183 
+	gACC
+,
+
+184 
+	gINCL
+,
+
+185 
+	gTEMP
+,
+
+186 
+	gAUX
+
+
+189 
+c⁄°ex¥
+ 
+	g°d
+::
+¨øy
+<
+boﬁ
+, 5> 
+	$isIn˛uded
+(
+D©agømIdítifõr
+ 
+d©agøm_idítifõr
+)
+
+191 
+d©agøm_idítifõr
+)
+
+194 
+D©agømIdítifõr
+::
+RATE
+:
+
+195  { 
+åue
+, 
+Ál£
+, false, false, false };
+
+196 
+D©agømIdítifõr
+::
+RATE_ACC
+:
+
+197  { 
+åue
+,Årue, 
+Ál£
+, false, false };
+
+198 
+D©agømIdítifõr
+::
+RATE_INCL
+:
+
+199  { 
+åue
+, 
+Ál£
+,Årue, false, false };
+
+200 
+D©agømIdítifõr
+::
+RATE_ACC_INCL
+:
+
+201  { 
+åue
+,Årue,Årue, 
+Ál£
+, false };
+
+202 
+D©agømIdítifõr
+::
+RATE_TEMP
+:
+
+203  { 
+åue
+, 
+Ál£
+, false,Årue, false };
+
+204 
+D©agømIdítifõr
+::
+RATE_ACC_TEMP
+:
+
+205  { 
+åue
+,Årue, 
+Ál£
+,Årue, false };
+
+206 
+D©agømIdítifõr
+::
+RATE_INCL_TEMP
+:
+
+207  { 
+åue
+, 
+Ál£
+,Årue,Årue, false };
+
+208 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP
+:
+
+209  { 
+åue
+,Årue,Årue,Årue, 
+Ál£
+ };
+
+210 
+D©agømIdítifõr
+::
+RATE_AUX
+:
+
+211  { 
+åue
+, 
+Ál£
+, false, false,Årue };
+
+212 
+D©agømIdítifõr
+::
+RATE_ACC_AUX
+:
+
+213  { 
+åue
+,Årue, 
+Ál£
+, false,Årue };
+
+214 
+D©agømIdítifõr
+::
+RATE_INCL_AUX
+:
+
+215  { 
+åue
+, 
+Ál£
+,Årue, false,Årue };
+
+216 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_AUX
+:
+
+217  { 
+åue
+,Årue,Årue, 
+Ál£
+,Årue };
+
+218 
+D©agømIdítifõr
+::
+RATE_TEMP_AUX
+:
+
+219  { 
+åue
+, 
+Ál£
+, false,Årue,Årue };
+
+220 
+D©agømIdítifõr
+::
+RATE_ACC_TEMP_AUX
+:
+
+221  { 
+åue
+,Årue, 
+Ál£
+,Årue,Årue };
+
+222 
+D©agømIdítifõr
+::
+RATE_INCL_TEMP_AUX
+:
+
+223  { 
+åue
+, 
+Ál£
+,Årue,Årue,Årue };
+
+224 
+D©agømIdítifõr
+::
+RATE_ACC_INCL_TEMP_AUX
+:
+
+225  { 
+åue
+,Årue,Årue,Årue,Årue };
+
+226 
+D©agømIdítifõr
+::
+CONFIGURATION
+:
+
+227  { 
+Ál£
+, false, false, false, false };
+
+228 
+D©agømIdítifõr
+::
+CONFIGURATION_CRLF
+:
+
+229  { 
+Ál£
+, false, false, false, false };
+
+231  { 
+Ál£
+, false, false, false, false };
+
+234 
+	}
+}
+
+236 c⁄° 
+uöt8_t
+ 
+	$ˇlcuœãD©agømSize
+(
+D©agømIdítifõr
+ 
+d©agøm_idítifõr
+)
+
+238 
+°d
+::
+¨øy
+<
+boﬁ
+, 5> 
+is_ö˛uded
+ = 
+	`isIn˛uded
+(
+d©agøm_idítifõr
+);
+
+239 
+uöt8_t
+ 
+n_öîtül_£ns‹s
+{ 1 };
+
+240 
+n_öîtül_£ns‹s
+ +
+is_ö˛uded
+[
+Sís‹Indx
+::
+ACC
+] ? 1 : 0;
+
+241 
+n_öîtül_£ns‹s
+ +
+is_ö˛uded
+[
+Sís‹Indx
+::
+INCL
+] ? 1 : 0;
+
+243 
+uöt8_t
+ 
+size
+{ 0 };
+
+244 
+size
+ +
+N_BYTES_DATAGRAM_ID
+;
+
+245 
+size
+ +
+n_öîtül_£ns‹s
+ * (3 * 
+N_BYTES_INERTIAL_SENSOR
+ + 
+N_BYTES_STATUS
+);
+
+246 
+size
+ +
+is_ö˛uded
+[
+Sís‹Indx
+::
+TEMP
+] ? 
+n_öîtül_£ns‹s
+ * (3 * 
+N_BYTES_TEMP_SENSOR
+ + 
+N_BYTES_STATUS
+) : 0;
+
+247 
+size
+ +
+is_ö˛uded
+[
+Sís‹Indx
+::
+AUX
+] ? 
+N_BYTES_AUX_SENSOR
+ + 
+N_BYTES_STATUS
+ : 0;
+
+248 
+size
+ +
+N_BYTES_COUNTER
+;
+
+249 
+size
+ +
+N_BYTES_LATENCY
+;
+
+250 
+size
+ +
+N_BYTES_CRC
+;
+
+252  
+size
+;
+
+253 
+	}
+}
+
+	@stim300_driver_node.cpp
+
+1 
+	~"drivî_°im300.h
+"
+
+2 
+	~"£rül_unix.h
+"
+
+4 
+	~"ros/ros.h
+"
+
+5 
+	~"£ns‹_msgs/Imu.h
+"
+
+6 
+	~<io°ªam
+>
+
+9 
+c⁄°ex¥
+ 
+	gdeÁu…Sam∂eR©e
+{ 125 };
+
+10 
+c⁄°ex¥
+ 
+	gavîageAŒ™V¨ün˚OfGyro
+{ 0.0001 * 2 * 0.00046};
+
+11 
+c⁄°ex¥
+ 
+	gavîageAŒ™V¨ün˚OfAcc
+{ 100 * 2 * 0.0052};
+
+13 
+	$maö
+(
+¨gc
+, ** 
+¨gv
+)
+
+15 
+°d
+::
+cö
+.
+	`gë
+();
+
+16 
+ros
+::
+	`öô
+(
+¨gc
+, 
+¨gv
+, "stim300_driver_node");
+
+18 
+ros
+::
+NodeH™dÀ
+ 
+node
+;
+
+20 
+°d
+::
+°rög
+ 
+devi˚_«me
+;
+
+21 
+°™¨dDeiv©i⁄OfGyro
+{ 0 };
+
+22 
+°™¨dDevüti⁄OfAcc
+{ 0 };
+
+23 
+v¨ün˚OfGyro
+{ 0 };
+
+24 
+v¨ün˚OfAcc
+{ 0 };
+
+25 
+ßm∂eR©e
+{ 0 };
+
+27 
+node
+.
+∑øm
+<
+°d
+::
+°rög
+>("devi˚_«me", 
+devi˚_«me
+, "/dev/ttyMXUSB0");
+
+28 
+SîülUnix
+ 
+	`£rül_drivî
+(
+devi˚_«me
+);
+
+29 
+DrivîStim300
+ 
+	`drivî_°im300
+(
+£rül_drivî
+);
+
+31 
+node
+.
+	`∑øm
+("°™¨d_devüti⁄_of_gyro", 
+°™¨dDeiv©i⁄OfGyro
+, 
+avîageAŒ™V¨ün˚OfGyro
+);
+
+32 
+node
+.
+	`∑øm
+("°™¨d_devüti⁄_of_acc", 
+°™¨dDevüti⁄OfAcc
+, 
+avîageAŒ™V¨ün˚OfAcc
+);
+
+33 
+node
+.
+	`∑øm
+("ßm∂e_øã", 
+ßm∂eR©e
+, 
+deÁu…Sam∂eR©e
+);
+
+34 
+v¨ün˚OfGyro
+ = 
+ßm∂eR©e
+ * 
+	`pow
+(
+°™¨dDeiv©i⁄OfGyro
+, 2);
+
+35 
+v¨ün˚OfAcc
+ = 
+ßm∂eR©e
+ * 
+	`pow
+(
+°™¨dDevüti⁄OfAcc
+, 2);
+
+38 
+£ns‹_msgs
+::
+Imu
+ 
+imu_msg_ãm∂©e
+{};
+
+39 
+imu_msg_ãm∂©e
+.
+‹õ¡©i⁄_cov¨ün˚
+[0] = -1;
+
+40 
+imu_msg_ãm∂©e
+.
+™guœr_vñocôy_cov¨ün˚
+[0] = 
+v¨ün˚OfGyro
+;
+
+41 
+imu_msg_ãm∂©e
+.
+™guœr_vñocôy_cov¨ün˚
+[4] = 
+v¨ün˚OfGyro
+;
+
+42 
+imu_msg_ãm∂©e
+.
+™guœr_vñocôy_cov¨ün˚
+[8] = 
+v¨ün˚OfGyro
+;
+
+43 
+imu_msg_ãm∂©e
+.
+löór_ac˚Àøti⁄_cov¨ün˚
+[0] = 
+v¨ün˚OfAcc
+;
+
+44 
+imu_msg_ãm∂©e
+.
+löór_ac˚Àøti⁄_cov¨ün˚
+[4] = 
+v¨ün˚OfAcc
+;
+
+45 
+imu_msg_ãm∂©e
+.
+löór_ac˚Àøti⁄_cov¨ün˚
+[8] = 
+v¨ün˚OfAcc
+;
+
+46 
+imu_msg_ãm∂©e
+.
+‹õ¡©i⁄
+.
+x
+ = 0;
+
+47 
+imu_msg_ãm∂©e
+.
+‹õ¡©i⁄
+.
+y
+ = 0;
+
+48 
+imu_msg_ãm∂©e
+.
+‹õ¡©i⁄
+.
+z
+ = 0;
+
+49 
+imu_msg_ãm∂©e
+.
+hódî
+.
+‰ame_id
+ = "imu_0";
+
+51 
+ros
+::
+Publishî
+ 
+imuSís‹Publishî
+ = 
+node
+.
+advîti£
+<
+£ns‹_msgs
+::
+Imu
+>("imu/data_raw", 1000);
+
+53 
+ros
+::
+R©e
+ 
+	`lo›_øã
+(1000);
+
+55 
+	`ROS_INFO
+("STIM300 IMU initialized successfully");
+
+57 
+ros
+::
+	`ok
+())
+
+59 
+£ns‹_msgs
+::
+Imu
+ 
+°im300msg
+ = 
+imu_msg_ãm∂©e
+;
+
+61 
+°im300msg
+.
+hódî
+.
+°amp
+ = 
+ros
+::
+Time
+::
+	`now
+();
+
+63 i‡(
+drivî_°im300
+.
+	`¥o˚ssPackë
+())
+
+65 i‡(!
+drivî_°im300
+.
+	`isChecksumGood
+())
+
+67 
+	`ROS_WARN
+("stim300 CRCÉrror ");
+
+71 i‡(!
+drivî_°im300
+.
+	`isSís‹SètusGood
+())
+
+73 
+	`ROS_WARN
+("STIM300: Internal hardwareÉrror");
+
+77 
+°im300msg
+.
+löór_ac˚Àøti⁄
+.
+x
+ = 
+drivî_°im300
+.
+	`gëAccX
+() + 0.0023;
+
+78 
+°im300msg
+.
+löór_ac˚Àøti⁄
+.
+y
+ = 
+drivî_°im300
+.
+	`gëAccY
+() + 0.05;
+
+79 
+°im300msg
+.
+löór_ac˚Àøti⁄
+.
+z
+ = 
+drivî_°im300
+.
+	`gëAccZ
+() + 0.027;
+
+80 
+°im300msg
+.
+™guœr_vñocôy
+.
+x
+ = 
+drivî_°im300
+.
+	`gëGyroX
+();
+
+81 
+°im300msg
+.
+™guœr_vñocôy
+.
+y
+ = 
+drivî_°im300
+.
+	`gëGyroY
+();
+
+82 
+°im300msg
+.
+™guœr_vñocôy
+.
+z
+ = 
+drivî_°im300
+.
+	`gëGyroZ
+();
+
+83 
+imuSís‹Publishî
+.
+	`publish
+(
+°im300msg
+);
+
+87 
+lo›_øã
+.
+	`¶ìp
+();
+
+89 
+ros
+::
+	`•öOn˚
+();
+
+92 
+	}
+}
+
+	@
+1
+.
+0
+8
+147
+datagram_parser.cpp
+datagram_parser.h
+driver_stim300.cpp
+serial_driver.h
+serial_unix.cpp
+serial_unix.h
+stim300_constants.h
+stim300_driver_node.cpp
